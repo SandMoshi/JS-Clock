@@ -1,0 +1,65 @@
+body{
+/*	background-color: white;*/
+}
+
+.clock{
+	height: 400px;
+	width: 400px;
+	background-color: black;
+	position: relative;
+	border-radius: 50%;
+}
+
+.clock-face{
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	height: 90%;
+	width: 90%;
+	background-color: white;
+	border-radius: 50%;
+}
+.hand{
+	width: 49%;
+	height: 2%;
+	background-color: black;
+	border-radius: 2px;
+	position: absolute;
+	top: 50%;
+	left: 1%;
+	transition: all 2s;
+	transform-origin: 100%; /*Make the right edge the pivot point */
+	transform: rotate(90deg); Change the start point to 12 oclock
+}
+
+.hour-hand{
+	width: 40%;
+	left: 10%;
+	height: 4%;
+	top: 49%;
+	transition: all 10s;
+/*	transition-timing-function: ease;*/
+}
+
+.minute-hand{
+	transition-timing-function: ease;
+}
+
+.second-hand{
+	height: 1%;
+	background-color: red;
+	top: 50.5%;
+	transition-timing-function: cubic-bezier(0.1,2.7,.58,1);
+}
+
+.hand{
+	width: 
+}
+
+/* To be used when we don't want the hands to animate the rotation */
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
