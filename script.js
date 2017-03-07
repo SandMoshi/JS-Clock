@@ -12,11 +12,30 @@ const hourHand = document.querySelector('.hour-hand');
 
 window.onload = function(){
 	setDate();
+	setTimeout( function(){	
+		removeNoTransition();
+   },950);
+}
+
+window.onfocus = function(){
+	addNoTransition();
 	setTimeout( function(){
+		removeNoTransition();
+	},500);
+}
+
+function removeNoTransition(){
+//Function that adds a class the prevents hand transitions
 		secondHand.classList.remove("notransition");			  
 		minuteHand.classList.remove("notransition");			  
-		hourHand.classList.remove("notransition");			  
-   },950);
+		hourHand.classList.remove("notransition");	
+}
+
+function addNoTransition(){
+//Function that adds a class the prevents hand transitions
+		secondHand.classList.add("notransition");			  
+		minuteHand.classList.add("notransition");			  
+		hourHand.classList.add("notransition");	
 }
 
 //Function that will move the clock hands
